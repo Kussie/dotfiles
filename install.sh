@@ -7,7 +7,7 @@ echo "Running Tasks"
 
 #generate new key
 echo "Creating new SSH key"
-ssh-keygen -t rsa
+ssh-keygen -t rsa -b 4096 -C "kussie@gmail.com"
 
 #copy fonts
 echo "Copying Fonts"

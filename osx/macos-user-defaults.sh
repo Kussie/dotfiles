@@ -278,6 +278,9 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
+# Show hidden files in Finder
+defaults write com.apple.finder ShowAllFiles -bool true
+
 # Use column view
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
