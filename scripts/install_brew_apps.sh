@@ -51,6 +51,7 @@ brew cask install vagrant
 brew cask install vagrant-manager
 brew cask install java
 brew cask install lastpass
+brew cask install forklift
 
 echo "Install QuickLook Plugins"
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
