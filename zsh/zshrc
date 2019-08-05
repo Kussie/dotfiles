@@ -53,7 +53,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git laravel kubectl zsh-autosuggestions laravel5 npm vagrant osx brew node composer)
+plugins=(git laravel kubectl zsh-autosuggestions zsh-syntax-highlighting laravel5 npm vagrant osx brew node composer)
 
 . ~/.zsh.aliases.sh
 . ~/.powerlevel-settings.sh
@@ -90,5 +90,5 @@ source $ZSH/oh-my-zsh.sh
 
 # Env
 . ~/.zsh.env.sh
-export PATH="/usr/local/opt/node@8/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

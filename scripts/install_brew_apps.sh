@@ -10,6 +10,9 @@ brew install openssl
 brew install speedtest-cli
 brew install hub
 brew install webp
+brew install zsh-autosuggestions
+brew install zsh-syntax-highlighting
+
 
 echo "Installing Brew Casks"
 brew cask install iterm2
