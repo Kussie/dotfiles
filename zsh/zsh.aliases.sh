@@ -2,8 +2,13 @@
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 alias sublime="open -a /Applications/Sublime\ Text.app"
 alias finder="open ."
-alias roadhouse="cd ~/Work/Repos/soar/hotels"
-alias prodigy="cd ~/Work/Repos/soar/air"
+alias s='echo "Soar Options:\r\ns:air - Prodigy\r\ns:hotels - Roadhouse\r\ns:mui - Micro UIs\r\ns:packages - Packages\r\ns:assets - External Assets\r\ns:services - Node Services"'
+alias s:hotels="cd ~/Work/Repos/soar/hotels"
+alias s:air="cd ~/Work/Repos/soar/air"
+alias s:packages="cd ~/Work/Repos/soar/packages"
+alias s:services="cd ~/Work/Repos/soar/services"
+alias s:assets="cd ~/Work/Repos/soar/assets"
+alias s:mui="cd ~/Work/Repos/soar/microuis"
 alias soar="cd ~/Work/Repos/soar"
 alias repos="cd ~/Work/Repos"
 alias sysinfo="~/bin/archey -l"
@@ -20,6 +25,12 @@ alias be:func="cd ~/Work/Repos/soar/air/booking-engine/ && ./bin/prodigy.sh robo
 alias be:jest="cd ~/Work/Repos/soar/air/booking-engine/ && ./bin/prodigy.sh jest -u"
 alias be:redis="cd ~/Work/Repos/soar/air/booking-engine/ && docker-compose exec redis redis-cli"
 
+alias gh="hub"
+alias gh:pr="hub pull-request -c --no-edit"
+alias gh:ci="hub ci-status"
+alias gh:sync="hub sync"
+
+alias docker:rm="docker rm $(docker ps -a -f status=exited -q)"
 alias dl="cd ~/Downloads"
 alias ll='ls -la'
 alias ..='cd ../' 
