@@ -22,7 +22,8 @@ cp -R themes/zsh/powerlevel9k ~/.oh-my-zsh/custom/themes
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 #copy zsh settings
-echo "Copying ZSH Settings"
+echo "Copying ZSH Settings and Scripts"
+cp proxy/proxy.sh ~/proxy.sh
 cp zsh/zshrc ~/.zshrc
 cp zsh/zsh.env.sh ~/.zsh.env.sh
 cp zsh/zsh.aliases.sh ~/.zsh.aliases.sh
@@ -33,6 +34,7 @@ chmod +x ~/bin/archey
 chmod +x ~/.zsh.aliases.sh
 chmod +x ~/.zsh.env.sh
 chmod +x ~/.powerlevel-settings.sh
+chmod +x ~/proxy.sh
 source ~/.zshrc
 
 #install various items
