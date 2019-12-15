@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxifierProfile version="101" platform="MacOSX" product_id="2" product_minver="200">
+    <Options>
+        <Resolve>
+            <AutoModeDetection enabled="true"/>
+            <ViaProxy enabled="false">
+                <TryLocalDnsFirst enabled="false"/>
+            </ViaProxy>
+            <ExclusionList ExcludeSimpleHostnames="false" ExcludeLocalhost="true" ExcludeSelfHostname="true" ExcludeLocalDomain="true">localhost;%ComputerName%;*.local;
+</ExclusionList>
+        </Resolve>
+        <Encryption mode="disabled"/>
+        <HttpProxiesSupport enabled="false"/>
+        <HandleDirectConnections enabled="false"/>
+        <ConnectionLoopDetection enabled="true"/>
+        <ProcessServices enabled="true"/>
+        <ProcessOtherUsers enabled="true"/>
+    </Options>
+    <ProxyList>
+        <Proxy id="100" type="HTTPS">
+            <Address>pcomempe001.au.fcl.internal</Address>
+            <Port>3128</Port>
+            <Options>0</Options>
+            <Authentication enabled="true">
+                <Username>kuskopb</Username>
+                <Password>0m3Ln8jAMF</Password>
+            </Authentication>
+        </Proxy>
+        <Proxy id="101" type="HTTPS">
+            <Address>pcomstle001.au.fcl.internal</Address>
+            <Port>3128</Port>
+            <Options>0</Options>
+            <Authentication enabled="true">
+                <Username>kuskopb</Username>
+                <Password>0m3Ln8jAMF</Password>
+            </Authentication>
+        </Proxy>
+        <Proxy id="102" type="HTTPS">
+            <Address>bne-app-proxy.au.fcl.internal</Address>
+            <Port>3128</Port>
+            <Options>0</Options>
+        </Proxy>
+        <Proxy id="103" type="HTTPS">
+            <Address>bne-proxy-dmz.au.fcl.internal</Address>
+            <Port>3128</Port>
+            <Options>0</Options>
+        </Proxy>
+        <Proxy id="104" type="SOCKS5">
+            <Address>127.0.0.1</Address>
+            <Port>8888</Port>
+            <Options>0</Options>
+        </Proxy>
+    </ProxyList>
+    <ChainList/>
+    <RuleList>
+        <Rule enabled="true">
+            <Name>local</Name>
+            <Targets>localhost; 127.0.0.1; %ComputerName%;10.0.0.0-10.255.255.255;  192.168.0.0-192.168.255.255; *.fcl.internal; *.au.fcl.internal; *.internal.fclweb.net; ::1; localmachine;</Targets>
+            <Action type="Direct"/>
+        </Rule>
+        <Rule enabled="true">
+            <Name>Vagrant</Name>
+            <Ports>8086; 8087; 8088; 8089;</Ports>
+            <Action type="Direct"/>
+        </Rule>
+        <Rule enabled="true">
+            <Name>Prodigy Vagrant</Name>
+            <Targets>*fcl-prodigy*</Targets>
+            <Action type="Direct"/>
+        </Rule>
+        <Rule enabled="false">
+            <Name>Internal</Name>
+            <Targets>*.core2.au.flitech.net;</Targets>
+            <Action type="Proxy">100</Action>
+        </Rule>
+        <Rule enabled="true">
+            <Name>FCL Internal</Name>
+            <Targets>dev-secure.*; mail.flightcentre.com.au; saml.au.flitech.net; intranet.au.flitech.net; wssreset.au.flitech.net; 10.28.36.136.xip.io; core2.au.flitech.net; 10.241.40.144; quickdox.au.flitech.net; cas.au.flitech.net; tappempl014.au.fcl.internal; tappempl014; svn.au.flitech.net; jenkins-jaguar.test.fcltest; kiosk.au.flitech.net; cas.stage.fcltest; stage.closer.au.fcl.internal; www.flightcentre.co.nz; *.fcl.cloud; *.fclmedia.com; *.fcltest; *.splunkcloud.com; *.fcl.internal; *jenkins-jaguar.test.fcltest*; *.flightcentre.splunkcloud.com; *.flitech.net;</Targets>
+            <Action type="Direct"/>
+        </Rule>
+        <Rule enabled="true">
+            <Name>Proxy</Name>
+            <Targets>*.kussie.com.au</Targets>
+            <Ports>2222</Ports>
+            <Action type="Direct"/>
+        </Rule>
+        <Rule enabled="true">
+            <Name>Content</Name>
+            <Targets>*.roosterteeth.com; *.mmo-champion.com; *.plex.tv; *.reddit.com; *.twitch.tv; *.steampowered.com; *.kotaku.com; *.soundcloud.com; *.audioboom.com; *.ea.com; *battle.net; *.gamepedia.com; *.gamespot.com; *.blizzard.com; *.finalfantasyxiv.com; *.bowwowinsurance.com.au; *.windows.net; *.wowhead.com; *.nintendo.com; *.wikiwand.com; *.wikia.com; *.consolegameswiki.com; *.steamcommunity.com; *.bricklink.com; *.virginmoney.com.au; *.ign.com; *.dropbox.com; *.resetera.com; *.gog.com; *.nexusmods.com; *.bethesda.net; *.getflix.com; *.my5.tv; *.channel5.com; *.twinfinite.net; *.playstation.com; *.xbox.com; *.discord.com; *.tplinkcloud.com; *.infernoplus.com; *.mega.nz; *.mega.co.nz; *.vg247.com; *.icloud.com; *.apple.com; *.discordapp.com; *.discordapp.net; *.square-enix.com;  *.vudu.com; *.packagist.org; *.evga.com; *.bitbucket.org; *.ring.com; *.gamerant.com;</Targets>
+            <Action type="Proxy">104</Action>
+        </Rule>
+        <Rule enabled="false">
+            <Name>Home Tunnel</Name>
+            <Action type="Proxy">104</Action>
+        </Rule>
+        <Rule enabled="true">
+            <Name>Default</Name>
+            <Action type="Direct"/>
+        </Rule>
+    </RuleList>
+</ProxifierProfile>
