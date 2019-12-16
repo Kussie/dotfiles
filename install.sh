@@ -23,7 +23,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom}/
 
 #copy zsh settings
 echo "Copying ZSH Settings and Scripts"
-cp proxy/proxy.sh ~/proxy.sh
+cp proxy/proxy.sh ~/.proxy.sh
 cp zsh/zshrc ~/.zshrc
 cp zsh/zsh.env.sh ~/.zsh.env.sh
 cp zsh/zsh.aliases.sh ~/.zsh.aliases.sh
@@ -34,7 +34,7 @@ chmod +x ~/bin/archey
 chmod +x ~/.zsh.aliases.sh
 chmod +x ~/.zsh.env.sh
 chmod +x ~/.powerlevel-settings.sh
-chmod +x ~/proxy.sh
+chmod +x ~/.proxy.sh
 source ~/.zshrc
 
 #install various items
