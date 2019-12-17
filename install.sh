@@ -52,8 +52,8 @@ open themes/material-dark.itermcolors
 
 #mac defaults
 echo "Setting System Defaults"
-./osx/macos-system-defaults.sh
-./osx/macos-user-defaults.sh
+sudo ./osx/macos-system-defaults.sh
+sudo ./osx/macos-user-defaults.sh
 
 echo "Setup Finished - Please Reboot"
 
