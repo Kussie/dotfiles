@@ -1,3 +1,13 @@
+NONE='\033[00m'
+RED='\033[01;31m'
+GREEN='\033[01;32m'
+YELLOW='\033[01;33m'
+PURPLE='\033[01;35m'
+CYAN='\033[01;36m'
+WHITE='\033[01;37m'
+BOLD='\033[1m'
+UNDERLINE='\033[4m'
+
 # Aliases
 # Flight Centre
 alias s='echo "Soar Options:\r\ns:air - Prodigy\r\ns:hotels - Roadhouse\r\ns:mui - Micro UIs\r\ns:packages - Packages\r\ns:assets - External Assets\r\ns:services - Node Services"'
@@ -44,12 +54,16 @@ alias repos="cd ~/Work/Repos"
 alias docker:rm="docker rm $(docker ps -a -f status=exited -q)"
 alias dc="docker-compose"
 
-# SSH Shortcuts
-alias ssh:levi="ssh kussie@kussie.com.au -p 2200"
-
-
 # Github
 alias gh="hub"
 alias gh:pr="hub pull-request -c --no-edit"
 alias gh:ci="hub ci-status"
 alias gh:sync="hub sync"
+
+# Remote Servers
+alias levi='echo -e "${BOLD}${GREEN}Available options for Levithan (NUC Gen 8 Server)${NONE}${NONE}\n\n${CYAN}levi:ssh${NONE} - Establish SSH session\n${CYAN}levi:mount${NONE} - Mount home drive on local machine\n${CYAN}levi:unmount${NONE} - unmount the current mounted home directory"'
+alias levi:ssh="ssh kussie@kussie.com.au -p 2200"
+alias levi:mount="sshfs -p 2200 kussie@kussie.com.au:/home/kussie ~/Personal/levi && cd ~/Personal/levi"
+alias levi:unmount="umount kussie@kussie.com.au:/home/kussie"
+
+
