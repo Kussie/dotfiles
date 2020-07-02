@@ -27,6 +27,8 @@ brew cask install sensiblesidebuttons
 brew cask install lastpass
 brew cask install bettertouchtool # Touch bar customization
 brew cask install authy
+brew cask install osxfuse
+brew install sshfs
 
 # Development
 brew cask install virtualbox
