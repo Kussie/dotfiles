@@ -41,8 +41,8 @@ source ~/.zshrc
 ./scripts/install_brew.sh
 ./scripts/install_brew_apps.sh
 ./scripts/install_node.sh
-./scripts/create_work_folder.sh
-./scripts/install_soar.sh
+#./scripts/create_work_folder.sh
+#./scripts/install_soar.sh
 
 #Copy iterm profiles
 echo "Setting up iTerm2 Profile"
