@@ -50,6 +50,8 @@ alias gco="git checkout"
 alias gf="git fetch"
 alias gp="git pull"
 alias gr="git reset --hard"
+alias ga="git add ."
+function gcap() { git commit -am "$@"; git push; }
 
 # Docker
 alias docker:rm="docker rm $(docker ps -a -f status=exited -q)"
