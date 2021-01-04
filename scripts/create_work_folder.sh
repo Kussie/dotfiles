@@ -2,6 +2,13 @@
 
 echo "Creating Work Directory"
 cd ~
-mkdir Work
-cd Work
-mkdir Repos
+if [ -d "Work" ] 
+then
+    echo "Work folder already exists... skipping" 
+else
+    cd ~
+	mkdir Work
+	cd Work
+	mkdir Repos
+fi
+

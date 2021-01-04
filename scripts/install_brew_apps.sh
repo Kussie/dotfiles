@@ -3,33 +3,19 @@
 brew tap homebrew/cask-versions
 
 echo "Installing Brew Utils"
-brew install git
-brew install git-extras
-brew install wget
-brew install autoconf
-brew install autojump
-brew install openssl
-brew install speedtest-cli
-brew install hub
-brew install webp
-brew install zsh-autosuggestions
+brew install git git-extras wget sshfs autoconf autojump openssl speedtest-cli hub webp zsh-autosuggestions tree jq
 
 # Install Applications
 echo "Installing Brew Casks"
+
 # System Utilities
-brew install --cask iterm2
-brew install --cask ngrok
-brew install --cask java
-brew install --cask proxifier
+brew install --cask iterm2 ngrok java proxifier moom sensiblesidebuttons authy osxfuse alt-tab
 #brew install --cask bartender # If on Big Sur install Brtender 4 manually
-brew install --cask moom
-brew install --cask sensiblesidebuttons
 brew install --cask lastpass
 brew install --cask bettertouchtool # Touch bar customization
-brew install --cask authy
-brew install --cask osxfuse
-brew install sshfs
-brew install --cask alt-tab
+
+# Screensaver
+brew install --cask aerial
 
 # Development
 brew install --cask virtualbox
@@ -45,49 +31,31 @@ brew install --cask dropbox
 brew install --cask onedrive
 
 # Browsers
-brew install --cask firefox
-brew install --cask google-chrome
+brew install --cask firefox google-chrome microsoft-edge
 #brew install --cask google-chrome-beta
 #brew install --cask microsoft-edge-beta
-brew install --cask microsoft-edge
 
 # Coding/IDEs
 brew install --cask db-browser-for-sqlite
 brew install --cask phpstorm
 #brew install --cask visual-studio-code
 brew install --cask sublime-text2
+brew install --cask typora # Markdown editor/viewer
 
 # Productivity
-brew install --cask alfred
-brew install --cask microsoft-office
-brew install --cask beyond-compare
-brew install --cask keka
-brew install --cask the-unarchiver
+brew install --cask alfred microsoft-office beyond-compare keka the-unarchiver
 
 # Social
-brew install --cask slack
-brew install --cask discord
-brew install --cask google-hangouts
-brew install --cask zoom
+brew install --cask slack discord google-hangouts zoom
 
 # Remote Desktop
-brew install --cask vnc-viewer
-brew install --cask splashtop-personal
-brew install --cask microsoft-remote-desktop-beta
+brew install --cask vnc-viewer splashtop-personal microsoft-remote-desktop-beta
 
 # Media
-brew install --cask spotify
-brew install --cask spotmenu
-brew install --cask vlc
-brew install --cask iina # better video player
-#brew install --cask handbrake
-#brew install --cask mplayerx
-brew install --cask plex-media-player
-brew install --cask pocket-casts
+brew install --cask spotify spotmenu vlc iina plex-media-player pocket-casts
 
 # Reading
-brew install --cask kindle
-brew install --cask yacreader
+brew install --cask kindle yacreader
 
 # Other
 brew install --cask ring

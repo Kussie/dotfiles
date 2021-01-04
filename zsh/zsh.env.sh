@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Owner
-export USER_NAME="benkuskopf"
+export USER_NAME="YOURUSERNAMEHERE"
 #export PATH="$(brew --prefix homebrew/php/php72)/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"

@@ -38,25 +38,35 @@ if [ "$CONT" = "y" ]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     #copy custom zsh theme
     cp -R themes/zsh/powerlevel9k ~/.oh-my-zsh/custom/themes
-    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 fi
 
 #copy zsh settings
 read -p "Copy ZSH Settings and Scripts (y/n)? " CONT
 if [ "$CONT" = "y" ]; then
-    cp proxy/proxy.sh ~/.proxy.sh
     cp zsh/zshrc ~/.zshrc
     cp zsh/zsh.env.sh ~/.zsh.env.sh
     cp zsh/zsh.aliases.sh ~/.zsh.aliases.sh
     cp zsh/powerlevel-settings.sh ~/.powerlevel-settings.sh
+    sed -i -e "s/YOURUSERNAMEHERE/${USER}/g" ~/.zsh.env.sh
+    sed -i -e "s/YOURUSERNAMEHERE/${USER}/g" ~/.zshrc
     mkdir ~/bin
     cp bin/archey ~/bin/archey
     chmod +x ~/bin/archey
     chmod +x ~/.zsh.aliases.sh
     chmod +x ~/.zsh.env.sh
     chmod +x ~/.powerlevel-settings.sh
+    source ~/.zshrc
+fi
+
+read -p "Install proxy (y/n)? " CONT
+if [ "$CONT" = "y" ]; then
+    cp proxy/proxy.sh ~/.proxy.sh
     chmod +x ~/.proxy.sh
     source ~/.zshrc
+else 
+    sed -i -e "s/alias proxy=/#alias proxy=/g" ~/.zsh.aliases.sh
+    source ~/.zsh.aliases.sh
 fi
 
 read -p "Run Brew Scripts (y/n)? " CONT
@@ -68,11 +78,26 @@ if [ "$CONT" = "y" ]; then
     sudo chmod +x ./scripts/install_node.sh
     sudo chmod +x ./scripts/create_work_folder.sh
     ./scripts/install_brew.sh
-    ./scripts/install_brew_apps.sh
-    ./scripts/install_php.sh
-    ./scripts/install_node.sh
+    echo ""
+    read -p "Install Recommended Brew Apps (y/n)? " CONT
+    if [ "$CONT" = "y" ]; then
+        ./scripts/install_brew_apps.sh
+    fi
+
+    echo ""
+    read -p "Install Node/NVM (y/n)? " CONT
+    if [ "$CONT" = "y" ]; then
+        ./scripts/install_node.sh
+    fi
+    echo ""
+    read -p "Install PHP (y/n)? " CONT
+    if [ "$CONT" = "y" ]; then
+        ./scripts/install_php.sh
+    fi
+
     ./scripts/create_work_folder.sh
 fi
+
 
 #Copy iterm profiles
 read -p "Set up iTerm2 Profile (y/n)? " CONT

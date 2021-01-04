@@ -2,8 +2,7 @@
 
 if test $(which node)
 then
-	echo "Updating NPM"
- 	npm install npm@latest -g
+	echo "Node already installed... skipping"
 else
 	echo "Node.JS is not installed"
 	brew install nvm
@@ -11,4 +10,3 @@ else
 	nvm use node
 	nvm alias default node
 fi
-
