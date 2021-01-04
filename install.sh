@@ -37,12 +37,14 @@ chmod +x ~/.powerlevel-settings.sh
 chmod +x ~/.proxy.sh
 source ~/.zshrc
 
+echo "Running Brew Setups"
 #install various items
+chmod -R +x ./scripts
 ./scripts/install_brew.sh
 ./scripts/install_brew_apps.sh
+./scripts/install_php.sh
 ./scripts/install_node.sh
-#./scripts/create_work_folder.sh
-#./scripts/install_soar.sh
+./scripts/create_work_folder.sh
 
 #Copy iterm profiles
 echo "Setting up iTerm2 Profile"
@@ -52,8 +54,8 @@ open themes/material-dark.itermcolors
 
 #mac defaults
 echo "Setting System Defaults"
-sudo ./osx/macos-system-defaults.sh
-sudo ./osx/macos-user-defaults.sh
+#sudo ./osx/macos-system-defaults.sh
+#sudo ./osx/macos-user-defaults.sh
 
 echo "Setup Finished - Please Reboot"
 
