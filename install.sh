@@ -96,6 +96,7 @@ echo -e "${BOLD}${CYAN}Please install the following apps manually${NONE}${NONE}"
 echo -e " - Dato (Calendar dropdown - ${UNDERLINE}https://sindresorhus.com/dato${NONE})"
 echo -e " - Bartender4 (Better Menubar on Big Sur- ${UNDERLINE}https://www.macbartender.com/${NONE})"
 echo -e " - Pipifier (Picture in Picture - ${UNDERLINE}https://apps.apple.com/us/app/pipifier-pip-for-nearly-every-video/id1160374471${NONE})"
+echo -e " - MacForge (MacOS Tweaks - ${UNDERLINE}https://github.com/MacEnhance/MacForge${NONE})"
 echo ""
 printf "${BOLD}${YELLOW}${WARNING}  Setup Finished - Please Reboot${NONE}${NONE}"
 echo "";
