@@ -59,7 +59,7 @@ if [ "$CONT" = "y" ]; then
     source ~/.zshrc
 fi
 
-read -p "Install proxy (y/n)? " CONT
+read -p "Install Proxy (y/n)? " CONT
 if [ "$CONT" = "y" ]; then
     cp proxy/proxy.sh ~/.proxy.sh
     chmod +x ~/.proxy.sh

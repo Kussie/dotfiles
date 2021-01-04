@@ -1,65 +1,69 @@
 #!/bin/bash
+if test $(which brew)
+then
+	brew tap homebrew/cask-versions
 
-brew tap homebrew/cask-versions
+	echo "Installing Brew Utils"
+	brew install git git-extras wget sshfs autoconf autojump openssl speedtest-cli hub webp zsh-autosuggestions tree jq
 
-echo "Installing Brew Utils"
-brew install git git-extras wget sshfs autoconf autojump openssl speedtest-cli hub webp zsh-autosuggestions tree jq
+	# Install Applications
+	echo "Installing Brew Casks"
 
-# Install Applications
-echo "Installing Brew Casks"
+	# System Utilities
+	brew install --cask iterm2 ngrok java proxifier moom sensiblesidebuttons authy osxfuse alt-tab
+	#brew install --cask bartender # If on Big Sur install Brtender 4 manually
+	brew install --cask lastpass
+	brew install --cask bettertouchtool # Touch bar customization
 
-# System Utilities
-brew install --cask iterm2 ngrok java proxifier moom sensiblesidebuttons authy osxfuse alt-tab
-#brew install --cask bartender # If on Big Sur install Brtender 4 manually
-brew install --cask lastpass
-brew install --cask bettertouchtool # Touch bar customization
+	# Screensaver
+	brew install --cask aerial
 
-# Screensaver
-brew install --cask aerial
+	# Development
+	brew install --cask virtualbox
+	brew install --cask docker
+	brew install --cask vagrant
+	brew install --cask vagrant-manager
+	brew install --cask postman
+	brew install --cask insomnia # Postman alternative
+	brew install --cask forklift #FTP/SFTP etc
 
-# Development
-brew install --cask virtualbox
-brew install --cask docker
-brew install --cask vagrant
-brew install --cask vagrant-manager
-brew install --cask postman
-brew install --cask insomnia # Postman alternative
-brew install --cask forklift #FTP/SFTP etc
+	# Remote Drives
+	brew install --cask dropbox
+	brew install --cask onedrive
 
-# Remote Drives
-brew install --cask dropbox
-brew install --cask onedrive
+	# Browsers
+	brew install --cask firefox google-chrome microsoft-edge
+	#brew install --cask google-chrome-beta
+	#brew install --cask microsoft-edge-beta
 
-# Browsers
-brew install --cask firefox google-chrome microsoft-edge
-#brew install --cask google-chrome-beta
-#brew install --cask microsoft-edge-beta
+	# Coding/IDEs
+	brew install --cask db-browser-for-sqlite
+	brew install --cask phpstorm
+	#brew install --cask visual-studio-code
+	brew install --cask sublime-text2
+	brew install --cask typora # Markdown editor/viewer
 
-# Coding/IDEs
-brew install --cask db-browser-for-sqlite
-brew install --cask phpstorm
-#brew install --cask visual-studio-code
-brew install --cask sublime-text2
-brew install --cask typora # Markdown editor/viewer
+	# Productivity
+	brew install --cask alfred microsoft-office beyond-compare keka the-unarchiver
 
-# Productivity
-brew install --cask alfred microsoft-office beyond-compare keka the-unarchiver
+	# Social
+	brew install --cask slack discord google-hangouts zoom
 
-# Social
-brew install --cask slack discord google-hangouts zoom
+	# Remote Desktop
+	brew install --cask vnc-viewer splashtop-personal microsoft-remote-desktop-beta
 
-# Remote Desktop
-brew install --cask vnc-viewer splashtop-personal microsoft-remote-desktop-beta
+	# Media
+	brew install --cask spotify spotmenu vlc iina plex-media-player pocket-casts
 
-# Media
-brew install --cask spotify spotmenu vlc iina plex-media-player pocket-casts
+	# Reading
+	brew install --cask kindle yacreader
 
-# Reading
-brew install --cask kindle yacreader
+	# Other
+	brew install --cask ring
 
-# Other
-brew install --cask ring
-
-echo "Installing QuickLook Plugins"
-# Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
-brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package
+	echo "Installing QuickLook Plugins"
+	# Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
+	brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package
+else
+	echo "Homebrew Required"
+fi

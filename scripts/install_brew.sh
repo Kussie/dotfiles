@@ -2,7 +2,7 @@
 
 echo "Installing Brew"
 
-if test $(which node)
+if test $(which brew)
 then
 	echo "Homebrew already installed... skipping"
 else
