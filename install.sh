@@ -1,6 +1,19 @@
 #!/bin/bash
 
-echo "Starting Setup"
+NONE='\033[00m'
+RED='\033[01;31m'
+GREEN='\033[01;32m'
+YELLOW='\033[01;33m'
+PURPLE='\033[01;35m'
+CYAN='\033[01;36m'
+WHITE='\033[01;37m'
+BOLD='\033[1m'
+UNDERLINE='\033[4m'
+UNICORN='\360\237\246\204'
+WARNING='\342\232\240\357\270\217';
+
+printf "${BOLD}${CYAN}${UNICORN} Starting Setup${NONE}${NONE}\n"
+echo ""
 read -p "Install Xcode CLI Tools (y/n)? " CONT
 if [ "$CONT" = "y" ]; then
     xcode-select --install
@@ -78,5 +91,12 @@ if [ "$CONT" = "y" ]; then
     sudo ./osx/macos-user-defaults.sh
 fi
 
-echo "Setup Finished - Please Reboot"
+echo ""
+echo -e "${BOLD}${CYAN}Please install the following apps manually${NONE}${NONE}"
+echo -e " - Dato (Calendar dropdown - ${UNDERLINE}https://sindresorhus.com/dato${NONE})"
+echo -e " - Bartender4 (Better Menubar on Big Sur- ${UNDERLINE}https://www.macbartender.com/${NONE})"
+echo -e " - Pipifier (Picture in Picture - ${UNDERLINE}https://apps.apple.com/us/app/pipifier-pip-for-nearly-every-video/id1160374471${NONE})"
+echo ""
+printf "${BOLD}${YELLOW}${WARNING}  Setup Finished - Please Reboot${NONE}${NONE}"
+echo "";
 

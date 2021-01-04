@@ -21,7 +21,7 @@ brew install --cask iterm2
 brew install --cask ngrok
 brew install --cask java
 brew install --cask proxifier
-brew install --cask bartender
+#brew install --cask bartender # If on Big Sur install Brtender 4 manually
 brew install --cask moom
 brew install --cask sensiblesidebuttons
 brew install --cask lastpass
@@ -30,7 +30,6 @@ brew install --cask authy
 brew install --cask osxfuse
 brew install sshfs
 brew install --cask alt-tab
-brew install --cask macforge
 
 # Development
 brew install --cask virtualbox
@@ -38,7 +37,7 @@ brew install --cask docker
 brew install --cask vagrant
 brew install --cask vagrant-manager
 brew install --cask postman
-brew install --cask Insomnia # Postman alternative
+brew install --cask insomnia # Postman alternative
 brew install --cask forklift #FTP/SFTP etc
 
 # Remote Drives
@@ -49,8 +48,8 @@ brew install --cask onedrive
 brew install --cask firefox
 brew install --cask google-chrome
 #brew install --cask google-chrome-beta
-#brew install --cask microsoft-edge-canary
-brew install --cask microsoft-edge-beta
+#brew install --cask microsoft-edge-beta
+brew install --cask microsoft-edge
 
 # Coding/IDEs
 brew install --cask db-browser-for-sqlite
@@ -67,6 +66,8 @@ brew install --cask the-unarchiver
 # Social
 brew install --cask slack
 brew install --cask discord
+brew install --cask google-hangouts
+brew install --cask zoom
 
 # Remote Desktop
 brew install --cask vnc-viewer
