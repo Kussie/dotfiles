@@ -61,6 +61,7 @@ brew install --cask sublime-text2
 brew install --cask alfred
 brew install --cask microsoft-office
 brew install --cask beyond-compare
+brew install --cask keka
 brew install --cask the-unarchiver
 
 # Social
@@ -78,6 +79,7 @@ brew install --cask microsoft-remote-desktop-beta
 brew install --cask spotify
 brew install --cask spotmenu
 brew install --cask vlc
+brew install --cask iina # better video player
 #brew install --cask handbrake
 #brew install --cask mplayerx
 brew install --cask plex-media-player
