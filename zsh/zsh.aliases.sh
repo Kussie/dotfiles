@@ -21,7 +21,7 @@ alias pot='ps -amcwwwxo "command %mem %cpu pid" | grep -v grep | head -16'
 alias clr='clear' 
 alias path='echo -e ${PATH//:/\\n}'
 ql () { qlmanage -p "$*" >& /dev/null; } 
-alias afk='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend' #suspend
+alias afk='open -a ScreenSaverEngine' #'/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend' #suspend
 
 # Directories
 alias count='find . -type f | wc -l'
