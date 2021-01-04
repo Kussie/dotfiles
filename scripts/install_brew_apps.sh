@@ -17,75 +17,78 @@ brew install zsh-autosuggestions
 # Install Applications
 echo "Installing Brew Casks"
 # System Utilities
-brew cask install iterm2
-brew cask install ngrok
-brew cask install java
-brew cask install proxifier
-brew cask install bartender
-brew cask install moom
-brew cask install sensiblesidebuttons
-brew cask install lastpass
-brew cask install bettertouchtool # Touch bar customization
-brew cask install authy
-brew cask install osxfuse
+brew install --cask iterm2
+brew install --cask ngrok
+brew install --cask java
+brew install --cask proxifier
+brew install --cask bartender
+brew install --cask moom
+brew install --cask sensiblesidebuttons
+brew install --cask lastpass
+brew install --cask bettertouchtool # Touch bar customization
+brew install --cask authy
+brew install --cask osxfuse
 brew install sshfs
+brew install --cask alt-tab
+brew install --cask macforge
 
 # Development
-brew cask install virtualbox
-brew cask install docker
-brew cask install vagrant
-brew cask install vagrant-manager
-brew cask install postman
-brew cask install forklift #FTP/SFTP etc
+brew install --cask virtualbox
+brew install --cask docker
+brew install --cask vagrant
+brew install --cask vagrant-manager
+brew install --cask postman
+brew install --cask Insomnia # Postman alternative
+brew install --cask forklift #FTP/SFTP etc
 
 # Remote Drives
-brew cask install dropbox
-brew cask install onedrive
+brew install --cask dropbox
+brew install --cask onedrive
 
 # Browsers
-brew cask install firefox
-brew cask install google-chrome
-#brew cask install google-chrome-beta
-#brew cask install microsoft-edge-canary
-brew cask install microsoft-edge-beta
+brew install --cask firefox
+brew install --cask google-chrome
+#brew install --cask google-chrome-beta
+#brew install --cask microsoft-edge-canary
+brew install --cask microsoft-edge-beta
 
 # Coding/IDEs
-brew cask install db-browser-for-sqlite
-brew cask install phpstorm
-#brew cask install visual-studio-code
-brew cask install sublime-text2
+brew install --cask db-browser-for-sqlite
+brew install --cask phpstorm
+#brew install --cask visual-studio-code
+brew install --cask sublime-text2
 
 # Productivity
-brew cask install alfred
-brew cask install microsoft-office
-brew cask install beyond-compare
-brew cask install the-unarchiver
+brew install --cask alfred
+brew install --cask microsoft-office
+brew install --cask beyond-compare
+brew install --cask the-unarchiver
 
 # Social
-brew cask install slack
-brew cask install discord
+brew install --cask slack
+brew install --cask discord
 
 # Remote Desktop
-brew cask install vnc-viewer
-brew cask install splashtop-personal
-brew cask install microsoft-remote-desktop-beta
+brew install --cask vnc-viewer
+brew install --cask splashtop-personal
+brew install --cask microsoft-remote-desktop-beta
 
 # Media
-brew cask install spotify
-brew cask install spotmenu
-brew cask install vlc
-brew cask install handbrake
-brew cask install mplayerx
-brew cask install plex-media-player
-brew cask install pocket-casts
+brew install --cask spotify
+brew install --cask spotmenu
+brew install --cask vlc
+#brew install --cask handbrake
+#brew install --cask mplayerx
+brew install --cask plex-media-player
+brew install --cask pocket-casts
 
 # Reading
-brew cask install kindle
-brew cask install yacreader
+brew install --cask kindle
+brew install --cask yacreader
 
 # Other
-brew cask install ring
+brew install --cask ring
 
 echo "Installing QuickLook Plugins"
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package
+brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package
