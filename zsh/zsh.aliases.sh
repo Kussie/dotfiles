@@ -63,12 +63,6 @@ alias gh:pr="hub pull-request -c --no-edit"
 alias gh:ci="hub ci-status"
 alias gh:sync="hub sync"
 
-# Remote Servers
-alias levi='echo -e "${BOLD}${GREEN}Available options for Levithan (NUC Gen 8 Server)${NONE}${NONE}\n\n${CYAN}levi:ssh${NONE} - Establish SSH session\n${CYAN}levi:mount${NONE} - Mount home drive on local machine\n${CYAN}levi:unmount${NONE} - unmount the current mounted home directory"'
-alias levi:ssh="ssh kussie@kussie.com.au -p 2200"
-alias levi:mount="sshfs -p 2200 kussie@kussie.com.au:/home/kussie ~/Personal/levi && cd ~/Personal/levi"
-alias levi:unmount="umount kussie@kussie.com.au:/home/kussie"
-
 # PHP Versions
 alias php@7.1='{ brew unlink php@7.1; brew unlink php@7.2; brew unlink php@7.3; brew unlink php@7.4; brew unlink php@8.0; brew link php@7.1 --force --overwrite; } &> /dev/null && php -v'
 alias php@7.2='{ brew unlink php@7.1; brew unlink php@7.2; brew unlink php@7.3; brew unlink php@7.4; brew unlink php@8.0; brew link php@7.2 --force --overwrite; } &> /dev/null && php -v'
