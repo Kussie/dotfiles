@@ -9,6 +9,10 @@ then
 	brew unlink php@7.4;
 	brew unlink php@8.0;
 	brew link php@8.0;
+
+  echo "Installing Composer";
+	php composer-setup.php --install-dir=bin --filename=composer;
+	mv composer.phar /usr/local/bin/composer;
 else
 	echo "Homebrew Required"
 fi
