@@ -95,7 +95,7 @@ if [ "$CONT" = "y" ]; then
         ./scripts/install_php.sh
     fi
 
-    ./scripts/create_work_folder.sh
+    ./scripts/create_folders.sh
 fi
 
 
