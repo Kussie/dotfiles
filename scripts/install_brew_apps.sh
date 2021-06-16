@@ -12,7 +12,7 @@ then
 	# System Utilities
 	brew install --cask iterm2 ngrok java proxifier moom sensiblesidebuttons authy osxfuse alt-tab
 	#brew install --cask bartender # If on Big Sur install Brtender 4 manually
-	brew install --cask lastpass
+	brew install --cask bitwarden
 	brew install --cask bettertouchtool # Touch bar customization
 
 	# Screensaver
@@ -26,6 +26,7 @@ then
 	brew install --cask postman
 	brew install --cask insomnia # Postman alternative
 	brew install --cask forklift #FTP/SFTP etc
+	brew install --cask dbeaver
 
 	# Remote Drives
 	brew install --cask dropbox
