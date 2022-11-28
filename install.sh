@@ -107,6 +107,7 @@ read -p "Set up iTerm2 Profile (y/n)? " CONT
 if [ "$CONT" = "y" ]; then
     mkdir ~/.iterm2
     cp themes/com.googlecode.iterm2.plist ~/.iterm2/com.googlecode.iterm2.plist
+    cp themes/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
     cp themes/material-dark.itermcolors ~/.iterm2/material-dark.itermcolors
     open ~/.iterm2/material-dark.itermcolors
 fi
