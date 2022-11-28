@@ -21,7 +21,7 @@ then
 	# Development
 	brew install --cask rancher
 	#brew install --cask virtualbox
-	brew install --cask docker
+	#brew install --cask docker
 	#brew install --cask vagrant
 	#brew install --cask vagrant-manager
 	brew install --cask postman
