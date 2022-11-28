@@ -22,7 +22,8 @@ fi
 #generate new key
 read -p "Create new SSH key (y/n)? " CONT
 if [ "$CONT" = "y" ]; then
-    ssh-keygen -t rsa -b 4096 -C "kussie@gmail.com"
+    read -p "Email Address for SSH Key? " KEY_EMAIL
+    ssh-keygen -t rsa -b 4096 -C "$KEY_EMAIL"
 fi
 
 #copy fonts
@@ -33,41 +34,43 @@ fi
 
 
 #install oh-my-zsh
-read -p "Install Oh My ZSH (y/n)? " CONT
-if [ "$CONT" = "y" ]; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    #copy custom zsh theme
-    cp -R themes/zsh/powerlevel9k ~/.oh-my-zsh/custom/themes
-    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-fi
+#read -p "Install Oh My ZSH (y/n)? " CONT
+#if [ "$CONT" = "y" ]; then
+#    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#    #copy custom zsh theme
+#    cp -R themes/zsh/powerlevel9k ~/.oh-my-zsh/custom/themes
+#    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+#fi
 
 #copy zsh settings
 read -p "Copy ZSH Settings and Scripts (y/n)? " CONT
 if [ "$CONT" = "y" ]; then
-    cp zsh/zshrc ~/.zshrc
+    #cp zsh/zshrc ~/.zshrc
     cp zsh/zsh.env.sh ~/.zsh.env.sh
     cp zsh/zsh.aliases.sh ~/.zsh.aliases.sh
-    cp zsh/powerlevel-settings.sh ~/.powerlevel-settings.sh
+    #cp zsh/powerlevel-settings.sh ~/.powerlevel-settings.sh
     sed -i -e "s/YOURUSERNAMEHERE/${USER}/g" ~/.zsh.env.sh
-    sed -i -e "s/YOURUSERNAMEHERE/${USER}/g" ~/.zshrc
+    #sed -i -e "s/YOURUSERNAMEHERE/${USER}/g" ~/.zshrc
     mkdir ~/bin
     cp bin/archey ~/bin/archey
     chmod +x ~/bin/archey
     chmod +x ~/.zsh.aliases.sh
     chmod +x ~/.zsh.env.sh
-    chmod +x ~/.powerlevel-settings.sh
-    source ~/.zshrc
+    #chmod +x ~/.powerlevel-settings.sh
+    #source ~/.zshrc
+    echo 'source ~/.zsh.env.sh' >> ~/.zshrc
+    echo 'source ~/.zsh.aliases.sh' >> ~/.zshrc
 fi
 
-read -p "Install Proxy (y/n)? " CONT
-if [ "$CONT" = "y" ]; then
-    cp proxy/proxy.sh ~/.proxy.sh
-    chmod +x ~/.proxy.sh
-    source ~/.zshrc
-else 
-    sed -i -e "s/alias proxy=/#alias proxy=/g" ~/.zsh.aliases.sh
-    source ~/.zsh.aliases.sh
-fi
+#read -p "Install Proxy (y/n)? " CONT
+#if [ "$CONT" = "y" ]; then
+#    cp proxy/proxy.sh ~/.proxy.sh
+#    chmod +x ~/.proxy.sh
+#    source ~/.zshrc
+#else
+#    sed -i -e "s/alias proxy=/#alias proxy=/g" ~/.zsh.aliases.sh
+#    source ~/.zsh.aliases.sh
+#fi
 
 read -p "Run Brew Scripts (y/n)? " CONT
 if [ "$CONT" = "y" ]; then
@@ -76,7 +79,7 @@ if [ "$CONT" = "y" ]; then
     sudo chmod +x ./scripts/install_brew_apps.sh
     sudo chmod +x ./scripts/install_php.sh
     sudo chmod +x ./scripts/install_node.sh
-    sudo chmod +x ./scripts/create_work_folder.sh
+    #sudo chmod +x ./scripts/create_work_folder.sh
     ./scripts/install_brew.sh
     echo ""
     read -p "Install Recommended Brew Apps (y/n)? " CONT
@@ -95,7 +98,7 @@ if [ "$CONT" = "y" ]; then
         ./scripts/install_php.sh
     fi
 
-    ./scripts/create_folders.sh
+    #./scripts/create_folders.sh
 fi
 
 

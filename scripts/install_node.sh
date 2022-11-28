@@ -8,8 +8,8 @@ then
 	else
 		echo "Node.JS is not installed"
 		brew install nvm
-		nvm install stable
-		nvm use node
+		nvm install 14
+		nvm use 14
 		nvm alias default node
 	fi
 else

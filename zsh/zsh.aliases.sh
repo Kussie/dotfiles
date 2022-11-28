@@ -11,6 +11,7 @@ UNDERLINE='\033[4m'
 # Aliases
 # Apps
 alias sublime="open -a /Applications/Sublime\ Text.app"
+alias pstorm="open -a /Applications/PhpStorm.app"
 alias finder="open ."
 
 # System
@@ -64,10 +65,10 @@ alias gh:ci="hub ci-status"
 alias gh:sync="hub sync"
 
 # PHP Versions
-alias php@7.1='{ brew unlink php@7.1; brew unlink php@7.2; brew unlink php@7.3; brew unlink php@7.4; brew unlink php@8.0; brew link php@7.1 --force --overwrite; } &> /dev/null && php -v'
-alias php@7.2='{ brew unlink php@7.1; brew unlink php@7.2; brew unlink php@7.3; brew unlink php@7.4; brew unlink php@8.0; brew link php@7.2 --force --overwrite; } &> /dev/null && php -v'
-alias php@7.3='{ brew unlink php@7.1; brew unlink php@7.2; brew unlink php@7.3; brew unlink php@7.4; brew unlink php@8.0; brew link php@7.3 --force --overwrite; } &> /dev/null && php -v'
-alias php@7.4='{ brew unlink php@7.1; brew unlink php@7.2; brew unlink php@7.3; brew unlink php@7.4; brew unlink php@8.0; brew link php@7.4 --force --overwrite; } &> /dev/null && php -v'
-alias php@8.0='{ brew unlink php@7.1; brew unlink php@7.2; brew unlink php@7.3; brew unlink php@7.4; brew unlink php@8.0; brew link php@8.0 --force --overwrite; } &> /dev/null && php -v'
-
+alias php@7.1='{ brew unlink php@7.1; brew unlink php@7.2; brew unlink php@7.3; brew unlink php@7.4; brew unlink php@8.0; brew unlink php@8.1; brew link php@7.1 --force --overwrite; } &> /dev/null && php -v'
+alias php@7.2='{ brew unlink php@7.1; brew unlink php@7.2; brew unlink php@7.3; brew unlink php@7.4; brew unlink php@8.0; brew unlink php@8.1; brew link php@7.2 --force --overwrite; } &> /dev/null && php -v'
+alias php@7.3='{ brew unlink php@7.1; brew unlink php@7.2; brew unlink php@7.3; brew unlink php@7.4; brew unlink php@8.0; brew unlink php@8.1; brew link php@7.3 --force --overwrite; } &> /dev/null && php -v'
+alias php@7.4='{ brew unlink php@7.1; brew unlink php@7.2; brew unlink php@7.3; brew unlink php@7.4; brew unlink php@8.0; brew unlink php@8.1; brew link php@7.4 --force --overwrite; } &> /dev/null && php -v'
+alias php@8.0='{ brew unlink php@7.1; brew unlink php@7.2; brew unlink php@7.3; brew unlink php@7.4; brew unlink php@8.0; brew unlink php@8.1; brew link php@8.0 --force --overwrite; } &> /dev/null && php -v'
+alias php@8.1='{ brew unlink php@7.1; brew unlink php@7.2; brew unlink php@7.3; brew unlink php@7.4; brew unlink php@8.0; brew unlink php@8.1; brew link php@8.1 --force --overwrite; } &> /dev/null && php -v'
 
