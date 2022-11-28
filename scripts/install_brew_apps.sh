@@ -4,13 +4,13 @@ then
 	brew tap homebrew/cask-versions
 
 	echo "Installing Brew Utils"
-	brew install git git-extras wget sshfs autoconf autojump openssl speedtest-cli hub webp zsh-autosuggestions tree jq
+	brew install git git-extras wget autoconf autojump openssl speedtest-cli hub webp zsh-autosuggestions tree jq
 
 	# Install Applications
 	echo "Installing Brew Casks"
 
 	# System Utilities
-	brew install --cask iterm2 ngrok proxifier moom sensiblesidebuttons authy osxfuse alt-tab
+	brew install --cask iterm2 ngrok moom sensiblesidebuttons authy alt-tab
 	#brew install --cask bartender # If on Big Sur install Bartender 4 manually
 	brew install --cask bitwarden lastpass
 	brew install --cask bettertouchtool # Touch bar customization
