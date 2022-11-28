@@ -8,6 +8,7 @@ then
 	else
 		echo "Node.JS is not installed"
 		brew install nvm
+		source ~/.zsh.env.sh
 		nvm install 14
 		nvm use 14
 		nvm alias default node
