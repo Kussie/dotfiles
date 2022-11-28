@@ -2,7 +2,7 @@
 
 # Owner
 export USER_NAME="YOURUSERNAMEHERE"
-#export PATH="$(brew --prefix homebrew/php/php72)/bin:$PATH"
+export PATH="/Users/$USER_NAME/.composer/vendor/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm

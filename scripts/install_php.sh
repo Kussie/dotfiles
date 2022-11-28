@@ -15,7 +15,10 @@ then
   echo "Installing Composer";
   php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 	php composer-setup.php --install-dir=bin --filename=composer;
-	#mv composer.phar /usr/local/bin/composer;
+
+	mkdir /usr/local/bin/;
+	mv bin/composer /usr/local/bin/composer;
+	composer global require laravel/valet;
 else
 	echo "Homebrew Required"
 fi

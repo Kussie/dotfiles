@@ -27,8 +27,6 @@ then
 	brew install --cask postman
 	brew install --cask insomnia # Postman alternative
 	brew install --cask forklift #FTP/SFTP etc
-	brew install --cask dbeaver-community
-	brew install --cask tableplus
 
 	# Remote Drives
 	#brew install --cask dropbox
@@ -39,11 +37,15 @@ then
 	#brew install --cask google-chrome-beta
 	#brew install --cask microsoft-edge-beta
 
-	# Coding/IDEs
+	# Database Clients
 	brew install --cask db-browser-for-sqlite
+  brew install --cask dbeaver-community
+	brew install --cask tableplus
+
+	# Coding/IDEs
 	brew install --cask phpstorm
 	brew install --cask visual-studio-code
-	brew install --cask sublime-text2
+	brew install --cask sublime-text
 	brew install --cask typora # Markdown editor/viewer
 
 	# Productivity
@@ -53,7 +55,7 @@ then
 	#brew install --cask slack discord google-hangouts zoom
 
 	# Remote Desktop
-	brew install --cask vnc-viewer splashtop-personal microsoft-remote-desktop-beta
+	brew install --cask vnc-viewer splashtop-personal microsoft-remote-desktop
 
 	# Media
 	brew install --cask spotify spotmenu vlc iina pocket-casts
@@ -66,7 +68,7 @@ then
 
 	echo "Installing QuickLook Plugins"
 	# Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
-	brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook suspicious-package
+	brew install --cask qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv qlimagesize webpquicklook
 else
 	echo "Homebrew Required"
 fi

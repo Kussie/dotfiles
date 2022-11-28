@@ -17,7 +17,6 @@ alias finder="open ."
 # System
 alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 alias sysinfo="~/bin/archey -l"
-alias proxy="~/.proxy.sh"
 alias pot='ps -amcwwwxo "command %mem %cpu pid" | grep -v grep | head -16'
 alias clr='clear' 
 alias path='echo -e ${PATH//:/\\n}'
@@ -68,6 +67,6 @@ alias unlinkphp='{ brew unlink php@7.4; brew unlink php@8.0; brew unlink php@8.1
 
 # PHP Versions
 alias php@7.4='{ unlinkphp; brew link --overwrite --force shivammathur/php/php@7.4; } &> /dev/null && php -v'
-alias php@8.0='{ unlinkphp;  link --overwrite --force shivammathur/php/php@8.0; } &> /dev/null && php -v'
+alias php@8.0='{ unlinkphp; brew link --overwrite --force shivammathur/php/php@8.0; } &> /dev/null && php -v'
 alias php@8.1='{ unlinkphp; brew link --overwrite --force shivammathur/php/php@8.1; } &> /dev/null && php -v'
 alias php@8.2='{ unlinkphp; brew link --overwrite --force shivammathur/php/php@8.2; } &> /dev/null && php -v'
