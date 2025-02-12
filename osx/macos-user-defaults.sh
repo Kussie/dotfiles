@@ -10,7 +10,7 @@
 
 
 function CFPreferencesAppSynchronize() {
-    python - <<END
+    python3.13 - <<END
 from Foundation import CFPreferencesAppSynchronize
 CFPreferencesAppSynchronize('$1')
 END
@@ -108,7 +108,7 @@ defaults write com.apple.dock "wvous-bl-modifier" -int 0
 echo "Setting Mouse and Trackpad preferences"
 
 # Set scroll direction
-defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+#defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 # Swipe between pages with two fingers
 defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool true

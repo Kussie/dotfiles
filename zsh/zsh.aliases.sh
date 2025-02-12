@@ -36,7 +36,7 @@ alias pa="php artisan"
 alias n="npm"
 alias nr="npm run"
 alias y="yarn"
-alias repos="cd ~/Work/Repos"
+alias work="cd ~/Development/Work/"
 alias log='tail -n0 -f storage/logs/laravel.log'
 
 # PHP Composer
@@ -57,16 +57,12 @@ function gcap() { git commit -am "$@"; git push; }
 alias docker:rm="docker rm $(docker ps -a -f status=exited -q)"
 alias dc="docker-compose"
 
-# Github
-alias gh="hub"
-alias gh:pr="hub pull-request -c --no-edit"
-alias gh:ci="hub ci-status"
-alias gh:sync="hub sync"
-
-alias unlinkphp='{ brew unlink php@7.4; brew unlink php@8.0; brew unlink php@8.1; brew unlink php@8.2; }'
+alias unlinkphp='{ brew unlink php@7.4 php@8.0 php@8.1 php@8.2 php@8.3 php@8.4; }'
 
 # PHP Versions
 alias php@7.4='{ unlinkphp; brew link --overwrite --force shivammathur/php/php@7.4; } &> /dev/null && php -v'
 alias php@8.0='{ unlinkphp; brew link --overwrite --force shivammathur/php/php@8.0; } &> /dev/null && php -v'
 alias php@8.1='{ unlinkphp; brew link --overwrite --force shivammathur/php/php@8.1; } &> /dev/null && php -v'
 alias php@8.2='{ unlinkphp; brew link --overwrite --force shivammathur/php/php@8.2; } &> /dev/null && php -v'
+alias php@8.3='{ unlinkphp; brew link --overwrite --force shivammathur/php/php@8.3; } &> /dev/null && php -v'
+alias php@8.4='{ unlinkphp; brew link --overwrite --force shivammathur/php/php@8.4; } &> /dev/null && php -v'

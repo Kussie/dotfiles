@@ -9,9 +9,8 @@ then
 		echo "Node.JS is not installed"
 		brew install nvm
 		source ~/.zsh.env.sh
-		nvm install 14
-		nvm use 14
-		nvm alias default node
+		nvm install node
+		nvm use node
 	fi
 else
 	echo "Homebrew Required"
